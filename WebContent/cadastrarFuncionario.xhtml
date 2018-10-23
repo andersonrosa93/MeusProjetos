@@ -1,0 +1,164 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+<ui:decorate template="/template.xhtml">
+	<ui:define name="centro">
+		<h:form>
+
+			<p:growl id="growl" sticky="false" showDetail="true" />
+
+			<p:wizard flowListener="#{FuncionarioWizard.onFlowProcess}">
+				<p:tab id="personal" title="Pessoa">
+					<p:panel header="Cadastrar pessoa">
+						<p:messages />
+						<h:panelGrid columns="2" columnClasses="label, value">
+							<h:outputText value="Nome: *" />
+							<p:inputText value="#{FuncionarioWizard.funcionario.nome}"
+								required="true" label="Nome" />
+
+							<h:outputText value="Sobrenome: *" />
+							<p:inputText value="#{FuncionarioWizard.funcionario.sobrenome}"
+								required="true" label="Sobrenome" />
+
+							<h:outputText value="Cpf: *" />
+							<p:inputText value="#{FuncionarioWizard.funcionario.cpf}"
+								required="true" label="Cpf" />
+
+							<h:outputText value="Data Nascimento: " />
+							<p:inputText
+								value="#{FuncionarioWizard.funcionario.datanascimento}"
+								label="DataNascimento" />
+
+							<h:outputText value="Skip to last: " />
+							<h:selectBooleanCheckbox value="#{FuncionarioWizard.skip}" />
+						</h:panelGrid>
+					</p:panel>
+				</p:tab>
+
+				<p:tab id="address" title="Endereço">
+					<p:panel header="Cadastrar endereço">
+						<p:messages />
+						<h:panelGrid columns="2" columnClasses="label, value">
+							<h:outputText value="Rua: " />
+							<p:inputText value="#{FuncionarioWizard.funcionario.rua}" />
+
+							<h:outputText value="Bairro: " />
+							<p:inputText value="#{FuncionarioWizard.funcionario.bairro}" />
+
+							<h:outputText value="Complemento: " />
+							<p:inputText value="#{FuncionarioWizard.funcionario.complemento}" />
+
+							<h:outputText value="Cep: " />
+							<p:inputText value="#{FuncionarioWizard.funcionario.cep}" />
+
+							<h:outputText value="Cidade: " />
+							<p:inputText value="#{FuncionarioWizard.funcionario.cidade}" />
+
+							<h:outputText value="Estado: " />
+							<p:inputText value="#{FuncionarioWizard.funcionario.estado}" />
+
+							<h:outputText value="Skip to last: " />
+							<h:selectBooleanCheckbox value="#{FuncionarioWizard.skip}" />
+						</h:panelGrid>
+
+					</p:panel>
+				</p:tab>
+
+				<p:tab id="contact" title="Contato">
+					<p:panel header="Cadastrar contato">
+						<p:messages />
+						<h:panelGrid columns="2" columnClasses="label, value">
+							<h:outputText value="Email: *" />
+							<p:inputText value="#{FuncionarioWizard.funcionario.email}"
+								required="true" label="Email" />
+
+							<h:outputText value="Telefone: " />
+							<p:inputText value="#{FuncionarioWizard.funcionario.telefone}" />
+
+							<h:outputText value="Informações Adicionais: " />
+							<p:inputText value="#{FuncionarioWizard.funcionario.observacao}" />
+						</h:panelGrid>
+					</p:panel>
+				</p:tab>
+
+				<p:tab id="confirm" title="Confirmação">
+					<p:panel header="Confirma os dados abaixo?">
+						<h:panelGrid id="confirmation" columns="3"
+							columnClasses="grid,grid,grid">
+							<h:panelGrid columns="2" columnClasses="label, value">
+								<h:outputText value="Nome: " />
+								<h:outputText value="#{FuncionarioWizard.funcionario.nome}"
+									styleClass="outputLabel" />
+
+								<h:outputText value="Sobrenome: " />
+								<h:outputText value="#{FuncionarioWizard.funcionario.sobrenome}"
+									styleClass="outputLabel" />
+
+								<h:outputText value="Cpf: " />
+								<h:outputText value="#{FuncionarioWizard.funcionario.cpf}"
+									styleClass="outputLabel" />
+
+								<h:outputText value="Data Nascimento: " />
+								<h:outputText
+									value="#{FuncionarioWizard.funcionario.datanascimento}"
+									styleClass="outputLabel" />
+							</h:panelGrid>
+
+							<h:panelGrid columns="2" columnClasses="label, value">
+								<h:outputText value="Rua: " />
+								<h:outputText value="#{FuncionarioWizard.funcionario.rua}"
+									styleClass="outputLabel" />
+
+								<h:outputText value="Bairro: " />
+								<h:outputText value="#{FuncionarioWizard.funcionario.bairro}"
+									styleClass="outputLabel" />
+
+								<h:outputText value="Complemento: " />
+								<h:outputText
+									value="#{FuncionarioWizard.funcionario.complemento}"
+									styleClass="outputLabel" />
+
+								<h:outputText value="Cep: " />
+								<h:outputText value="#{FuncionarioWizard.funcionario.cep}"
+									styleClass="outputLabel" />
+
+								<h:outputText value="Cidade: " />
+								<h:outputText value="#{FuncionarioWizard.funcionario.cidade}"
+									styleClass="outputLabel" />
+
+								<h:outputText value="Estado: " />
+								<h:outputText value="#{FuncionarioWizard.funcionario.estado}"
+									styleClass="outputLabel" />
+							</h:panelGrid>
+
+							<h:panelGrid columns="2" columnClasses="label, value">
+								<h:outputText value="Email: " />
+								<h:outputText value="#{FuncionarioWizard.funcionario.email}"
+									styleClass="outputLabel" />
+
+								<h:outputText value="Telefone: " />
+								<h:outputText value="#{FuncionarioWizard.funcionario.telefone}"
+									styleClass="outputLabel" />
+
+								<h:outputText value="Informações adicionais: " />
+								<h:outputText
+									value="#{FuncionarioWizard.funcionario.observacao}"
+									styleClass="outputLabel" />
+
+								<h:outputText />
+								<h:outputText />
+							</h:panelGrid>
+						</h:panelGrid>
+
+						<p:commandButton value="Submit"
+							actionListener="#{FuncionarioWizard.save}" update="growl"
+							process="@this" />
+					</p:panel>
+				</p:tab>
+			</p:wizard>
+
+		</h:form>
+	</ui:define>
+</ui:decorate>
+</html>

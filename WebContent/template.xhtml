@@ -1,0 +1,63 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Global Gás - Software Gestão</title>
+	<style type="text/css">
+body {
+	background-color: #eeeeee;
+	font-size: 12px
+}
+</style>
+</h:head>
+<h:body>
+	<div align="center">
+		<p:layout style="min-width:90%;max-width:150%;min-height:600px;">
+			<p:layoutUnit position="north" size="100">
+				<h:graphicImage url="/resources/img/menuTopo.jpg" />
+			</p:layoutUnit>
+
+			<p:layoutUnit position="west" size="220">
+				<ui:insert name="menu">
+					<h:form>
+    <p:growl>
+        <p:autoUpdate />
+    </p:growl>
+ 
+    <p:panelMenu style="width:200px">
+        <p:submenu label="Cadastro">
+            <p:menuitem value="Funcionario" url="faces/cadastrarFuncionario.xhtml" icon="ui-icon-disk" />
+            <p:menuitem value="Usuario" actionListener="#{menuView.update}"  icon="ui-icon-arrowrefresh-1-w" />
+        </p:submenu>
+        <p:submenu label="Vendas">
+            <p:menuitem value="Delete" actionListener="#{menuView.delete}"  ajax="false" icon="ui-icon-close"/>
+        </p:submenu>
+        <p:separator />
+        <p:submenu label="Estoque" >
+            <p:submenu label="Links" icon="ui-icon-extlink">
+                <p:submenu label="PrimeFaces" icon="ui-icon-heart">
+                    <p:menuitem value="Home" url="http://www.primefaces.org" icon="ui-icon-home" />
+                    <p:menuitem value="Docs" url="http://www.primefaces.org/documentation" icon="ui-icon-document" />
+                    <p:menuitem value="Download" url="http://www.primefaces.org/downloads" icon="ui-icon-arrowthick-1-s" />
+                    <p:menuitem value="Support" url="http://www.primefaces.org/support" icon="ui-icon-wrench" />
+                </p:submenu>
+            </p:submenu>
+            <p:menuitem value="Mobile" icon="ui-icon-signal" />
+        </p:submenu>
+    </p:panelMenu>
+</h:form>
+				</ui:insert>
+			</p:layoutUnit>
+			<p:layoutUnit position="center">
+				<ui:insert name="centro">
+                        O que estiver aqui será substituido!
+                    </ui:insert>
+			</p:layoutUnit>
+		</p:layout>
+	</div>
+</h:body>
+</html>
