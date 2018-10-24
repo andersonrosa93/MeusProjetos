@@ -9,6 +9,7 @@
 		<provider>org.hibernate.ejb.HibernatePersistence</provider>
 
 		<class>br.com.globalgas.model.Funcionario</class>
+		<class>br.com.globalgas.model.Usuario</class>
 		
 		<properties>
 		

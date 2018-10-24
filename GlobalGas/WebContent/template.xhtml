@@ -17,9 +17,7 @@ body {
 <h:body>
 	<div align="center">
 		<p:layout style="min-width:90%;max-width:150%;min-height:600px;">
-			<p:layoutUnit position="north" size="100">
-				<h:graphicImage url="/resources/img/menuTopo.jpg" />
-			</p:layoutUnit>
+
 
 			<p:layoutUnit position="west" size="220">
 				<ui:insert name="menu">
@@ -29,6 +27,9 @@ body {
     </p:growl>
  
     <p:panelMenu style="width:200px">
+            <p:submenu label="Inicio">
+            <p:menuitem value="Sair" url="faces/index.xhtml" icon="ui-icon-disk" />
+        </p:submenu>
         <p:submenu label="Cadastro">
             <p:menuitem value="Funcionario" url="faces/cadastrarFuncionario.xhtml" icon="ui-icon-disk" />
             <p:menuitem value="Usuario" actionListener="#{menuView.update}"  icon="ui-icon-arrowrefresh-1-w" />
