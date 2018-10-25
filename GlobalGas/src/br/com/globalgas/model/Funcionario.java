@@ -1,11 +1,13 @@
 package br.com.globalgas.model;
 
 import java.io.Serializable;
+import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
 @Entity
 public class Funcionario implements Serializable {
@@ -21,7 +23,7 @@ public class Funcionario implements Serializable {
 	private String nome;
 	private String sobrenome;
 	private String cpf;
-	private String datanascimento;
+	private Date datanascimento;
 	private String telefone;
 	private String rua;
 	private String bairro;
@@ -31,6 +33,8 @@ public class Funcionario implements Serializable {
 	private String estado;
 	private String email;
 	private String observacao;
+	@OneToOne
+	private Usuario usuario;
 
 	public int getId() {
 		return id;
@@ -104,13 +108,7 @@ public class Funcionario implements Serializable {
 		this.email = email;
 	}
 
-	public String getDatanascimento() {
-		return datanascimento;
-	}
 
-	public void setDatanascimento(String datanascimento) {
-		this.datanascimento = datanascimento;
-	}
 
 	public String getSobrenome() {
 		return sobrenome;
@@ -142,6 +140,14 @@ public class Funcionario implements Serializable {
 
 	public void setObservacao(String observacao) {
 		this.observacao = observacao;
+	}
+
+	public Date getDatanascimento() {
+		return datanascimento;
+	}
+
+	public void setDatanascimento(Date datanascimento) {
+		this.datanascimento = datanascimento;
 	}
 
 }

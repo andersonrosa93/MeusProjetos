@@ -1,0 +1,29 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+<ui:decorate template="/template.xhtml">
+	<ui:define name="centro">
+		<h:form>
+			<p:messages id="messages" />
+
+			<p:panelGrid columns="2">
+
+				<p:outputLabel for="usuario" value="Usuario:" />
+				<p:inputText id="usuario" value="#{UsuarioMB.usuario.nomeUsuario}" />
+
+
+				<p:outputLabel for="senha" value="Senha:" />
+				<p:inputText id="senha" value="#{UsuarioMB.usuario.senha}" />
+
+
+				<p:commandButton value="Cadastrar" icon="ui-icon-star"
+					action="#{UsuarioMB.cadastraUsuario}" update="messages">
+				</p:commandButton>
+
+
+			</p:panelGrid>
+		</h:form>
+	</ui:define>
+</ui:decorate>
+</html>

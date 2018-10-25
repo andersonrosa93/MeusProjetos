@@ -1,5 +1,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
-	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:h="http://java.sun.com/jsf/html"	
+	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:ui="http://java.sun.com/jsf/facelets"
 	xmlns:p="http://primefaces.org/ui">
 <ui:decorate template="/template.xhtml">
@@ -25,10 +26,9 @@
 							<p:inputText value="#{FuncionarioWizard.funcionario.cpf}"
 								required="true" label="Cpf" />
 
-							<h:outputText value="Data Nascimento: " />
-							<p:inputText
-								value="#{FuncionarioWizard.funcionario.datanascimento}"
-								label="DataNascimento" />
+							<p:outputLabel for="button" value="Data Nascimento: " />
+							<p:calendar id="button" value="#{FuncionarioWizard.funcionario.datanascimento}" showOn="button" />
+								
 
 							<h:outputText value="Skip to last: " />
 							<h:selectBooleanCheckbox value="#{FuncionarioWizard.skip}" />

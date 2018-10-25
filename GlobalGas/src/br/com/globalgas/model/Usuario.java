@@ -5,6 +5,7 @@ import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
   
@@ -20,10 +21,15 @@ public class Usuario {
        
       @Column(name="password", nullable=false, unique=false)
       private String senha;
+      
+      private Date dataCadastro;
   
-      @Column(name="lastAccess", unique=true)
+      @Column(unique=true)
       @Temporal(TemporalType.DATE)
       private Date ultimoAcesso;
+      
+      @OneToOne
+      private Funcionario funcionario;
        
       public String getNomeUsuario() {
             return nomeUsuario;
@@ -48,4 +54,20 @@ public class Usuario {
       public void setUltimoAcesso(Date ultimoAcesso) {
             this.ultimoAcesso = ultimoAcesso;
       }
+
+	public Date getDataCadastro() {
+		return dataCadastro;
+	}
+
+	public void setDataCadastro(Date dataCadastro) {
+		this.dataCadastro = dataCadastro;
+	}
+
+	public Funcionario getFuncionario() {
+		return funcionario;
+	}
+
+	public void setFuncionario(Funcionario funcionario) {
+		this.funcionario = funcionario;
+	}
  }
