@@ -10,8 +10,8 @@
 			<p:growl id="growl" sticky="false" showDetail="true" />
 
 			<p:wizard flowListener="#{FuncionarioWizard.onFlowProcess}">
-				<p:tab id="personal" title="Pessoa">
-					<p:panel header="Cadastrar pessoa">
+				<p:tab id="personal" title="Cadastro">
+					<p:panel header="Pessoa">
 						<p:messages />
 						<h:panelGrid columns="2" columnClasses="label, value">
 							<h:outputText value="Nome: *" />
@@ -30,14 +30,10 @@
 							<p:calendar id="button" value="#{FuncionarioWizard.funcionario.datanascimento}" showOn="button" />
 								
 
-							<h:outputText value="Skip to last: " />
-							<h:selectBooleanCheckbox value="#{FuncionarioWizard.skip}" />
 						</h:panelGrid>
 					</p:panel>
-				</p:tab>
 
-				<p:tab id="address" title="Endereço">
-					<p:panel header="Cadastrar endereço">
+					<p:panel header="Endereço">
 						<p:messages />
 						<h:panelGrid columns="2" columnClasses="label, value">
 							<h:outputText value="Rua: " />
@@ -58,15 +54,13 @@
 							<h:outputText value="Estado: " />
 							<p:inputText value="#{FuncionarioWizard.funcionario.estado}" />
 
-							<h:outputText value="Skip to last: " />
-							<h:selectBooleanCheckbox value="#{FuncionarioWizard.skip}" />
 						</h:panelGrid>
 
 					</p:panel>
-				</p:tab>
+				
 
-				<p:tab id="contact" title="Contato">
-					<p:panel header="Cadastrar contato">
+				
+					<p:panel header="Contato">
 						<p:messages />
 						<h:panelGrid columns="2" columnClasses="label, value">
 							<h:outputText value="Email: *" />
@@ -103,9 +97,12 @@
 								<h:outputText
 									value="#{FuncionarioWizard.funcionario.datanascimento}"
 									styleClass="outputLabel" />
-							</h:panelGrid>
-
-							<h:panelGrid columns="2" columnClasses="label, value">
+							
+								<h:outputText />
+								<h:outputText />
+								<h:outputText />
+								<h:outputText />
+							
 								<h:outputText value="Rua: " />
 								<h:outputText value="#{FuncionarioWizard.funcionario.rua}"
 									styleClass="outputLabel" />
@@ -130,9 +127,12 @@
 								<h:outputText value="Estado: " />
 								<h:outputText value="#{FuncionarioWizard.funcionario.estado}"
 									styleClass="outputLabel" />
-							</h:panelGrid>
-
-							<h:panelGrid columns="2" columnClasses="label, value">
+							
+								<h:outputText />
+								<h:outputText />
+								<h:outputText />
+								<h:outputText />
+							
 								<h:outputText value="Email: " />
 								<h:outputText value="#{FuncionarioWizard.funcionario.email}"
 									styleClass="outputLabel" />
@@ -148,12 +148,17 @@
 
 								<h:outputText />
 								<h:outputText />
-							</h:panelGrid>
+								<h:outputText />
+								<h:outputText />
+							
+						</h:panelGrid>
 						</h:panelGrid>
 
-						<p:commandButton value="Submit"
+						<p:commandButton value="Gravar"
 							actionListener="#{FuncionarioWizard.save}" update="growl"
-							process="@this" />
+							process="@this" >
+							<f:ajax render="@form" resetValues="true"/>
+							</p:commandButton>
 					</p:panel>
 				</p:tab>
 			</p:wizard>

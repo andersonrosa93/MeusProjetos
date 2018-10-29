@@ -3,7 +3,8 @@ package br.com.globalgas.controller;
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 
-import javax.faces.bean.SessionScoped;
+import javax.faces.bean.ViewScoped;
+import javax.faces.context.ExternalContext;
 import javax.faces.context.FacesContext;
 
 import org.primefaces.event.FlowEvent;
@@ -11,10 +12,10 @@ import org.primefaces.event.FlowEvent;
 import br.com.globalgas.dao.FuncionarioDao;
 import br.com.globalgas.model.Funcionario;
 
-@SessionScoped
+@ViewScoped
 @ManagedBean(name = "FuncionarioWizard")
 public class FuncionarioWizard {
-	
+
 	static FuncionarioDao funcDao = FuncionarioDao.getInstance();
 
 	private Funcionario funcionario;
@@ -23,7 +24,7 @@ public class FuncionarioWizard {
 	public FuncionarioWizard() {
 		funcionario = new Funcionario();
 	}
-	
+
 	public Funcionario getFuncionario() {
 		return funcionario;
 	}
@@ -33,14 +34,18 @@ public class FuncionarioWizard {
 	}
 
 	public void save() {
-		try{
+		try {
 			funcDao.persist(funcionario);
-		}catch(Exception ex) {
+
+		} catch (Exception ex) {
 			ex.getStackTrace();
 		}
 		FacesMessage msg = new FacesMessage("Sucesso", "Bem-vindo(a) :" + funcionario.getNome());
 		FacesContext.getCurrentInstance().addMessage(null, msg);
 		
+		
+
+
 	}
 
 	public boolean isSkip() {
