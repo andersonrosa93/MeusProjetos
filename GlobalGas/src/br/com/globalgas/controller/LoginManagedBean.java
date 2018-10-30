@@ -47,7 +47,7 @@ public class LoginManagedBean {
 				
 			} else {
 				
-				ec.redirect(ec.getRequestContextPath() + "/faces/login.xhtml");
+				ec.redirect(ec.getRequestContextPath() + "/faces/index.xhtml");
 				
 			}
 		} catch (IOException e) {

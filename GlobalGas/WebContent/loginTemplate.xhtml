@@ -18,22 +18,16 @@ body {
 	<div align="center">
 		<p:layout style="min-width:90%;max-width:150%;min-height:600px;">
 
+			<p:layoutUnit position="north" size="100" collapsible="true"
+				closable="true" resizable="true" effect="drop">
+				<div style="width: 20%; float: left; text-align: left;">
+					<img
+						src="https://portalvdl.com.br/wp-content/uploads/2017/06/liquigas.png"
+						style="height: 100%; width: 100%;" />
+				</div>
 
-			<p:layoutUnit position="west" size="220">
-				<ui:insert name="menu">
-					<h:form>
-    <p:growl>
-        <p:autoUpdate />
-    </p:growl>
- 
-    <p:panelMenu style="width:200px">
-        <p:submenu label="Home">
-            <p:menuitem value="Entrar" url="faces/login.xhtml" icon="ui-icon-disk" />
-        </p:submenu>
-    </p:panelMenu>
-</h:form>
-				</ui:insert>
 			</p:layoutUnit>
+
 			<p:layoutUnit position="center">
 				<ui:insert name="centro">
                         O que estiver aqui será substituido!
