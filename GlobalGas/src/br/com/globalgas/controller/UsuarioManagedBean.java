@@ -1,10 +1,9 @@
 package br.com.globalgas.controller;
 
-import java.io.IOException;
+
 
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
-import javax.faces.context.ExternalContext;
 import javax.faces.context.FacesContext;
 
 import br.com.globalgas.dao.UsuarioDAO;
@@ -37,16 +36,5 @@ public class UsuarioManagedBean {
 		this.usuario = usuario;
 	}
 
-	public void sair() {
-
-		try {
-			ExternalContext ec = FacesContext.getCurrentInstance().getExternalContext();
-			ec.redirect(ec.getRequestContextPath() + "/faces/index.xhtml");
-
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-
-	}
 
 }
