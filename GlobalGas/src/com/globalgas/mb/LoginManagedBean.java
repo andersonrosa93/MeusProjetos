@@ -37,7 +37,7 @@ public class LoginManagedBean {
 			sessionMap.put("id", usuario.getId());
 			
 			context.getExternalContext().getSessionMap().put("logado", true);
-			return "/restrito/listagemUsuarioT.xhtml?faces-redirect=true";
+			return "/restrito/listagemUsuario.xhtml?faces-redirect=true";
 		}
 	}
 

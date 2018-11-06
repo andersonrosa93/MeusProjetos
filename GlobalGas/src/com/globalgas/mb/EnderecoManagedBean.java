@@ -15,7 +15,7 @@ import com.globalgas.service.EnderecoService;
 @SessionScoped
 public class EnderecoManagedBean {
 
-	private final String TELA_NOVO_ENDERECO = "/restrito/endereco/novoEnderecoT.xhtml?faces-redirect=true";
+	private final String TELA_NOVO_ENDERECO = "/restrito/endereco/novoEndereco.xhtml?faces-redirect=true";
 	private final String TELA_LISTAGEM_ENDERECO = "/restrito/endereco/listagemEnderecoT?faces-redirect=true";
 	private final String TELA_ENDERECO = "/restrito/endereco/novoEnderecoT?faces-redirect=true&id=";
 
