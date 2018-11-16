@@ -4,23 +4,45 @@
 
 <h:head>
 
+      <link href="login/css/bootstrap.css" rel="stylesheet"/>
+      <link href="login/css/floating-labels.css" rel="stylesheet"/>
 </h:head>
 
 <h:body>
-      <h:form>
+
+
+      <h:form styleClass="form-signin">
             <p:messages id="messages" />
-            <p:panelGrid columns="2">
-                  <p:outputLabel for="nomeUsuario" value="Nome Usuário:" />
-                  <p:inputText id="nomeUsuario" value="#{loginMB.usuario.nomeUsuario}" />
 
-                  <p:outputLabel for="senha" value="Senha:" />
-                  <p:password id="senha" value="#{loginMB.usuario.senha}" />
 
-                  <p:commandButton value="Enviar" icon="ui-icon-star" action="#{loginMB.enviar}" ajax="false">
-                        <!--                  sem ajax="false" a requisição acontece duas vezes, uma na mesma tela (ajax)-->
-                  </p:commandButton>
+            <div class="text-center mb-4">
+                  <img class="mb-4" src="https://upload.wikimedia.org/wikipedia/commons/e/ea/Boostrap_logo.svg" alt="" width="72" height="72"></img>
+                  <h1 class="h3 mb-3 font-weight-normal">LOGIN</h1>
+            </div>
 
-            </p:panelGrid>
+            <div class="form-label-group">
+
+                  <p:inputText styleClass="form-control" id="nomeUsuario" value="#{loginMB.usuario.nomeUsuario}"/>
+                  <label for="nomeUsuario">Usuario:</label>
+            </div>
+
+            <div class="form-label-group">
+
+                  <p:password styleClass="form-control" id="senha" value="#{loginMB.usuario.senha}" />
+                  <label for="senha">Senha:</label>
+            </div>
+
+            <div class="checkbox mb-3">
+                  <label>
+                        <input type="checkbox" value="remember-me"> Remember me</input>
+                  </label>
+            </div>
+            <p:commandButton  styleClass="btn btn-lg btn-primary btn-block" value="Enviar" action="#{loginMB.enviar}" ajax="false">
+                  <!--                  sem ajax="false" a requisição acontece duas vezes, uma na mesma tela (ajax)-->
+            </p:commandButton>
+
+            <p class="mt-5 mb-3 text-muted text-center"> 2017-2018</p>
+
       </h:form>
 </h:body>
 </html>
