@@ -39,9 +39,20 @@ public class UsuarioDAO {
 	}
 
 	public void alterarUsuario(Usuario usuario) {
-		transaction.begin();
-		em.merge(usuario);
-		transaction.commit();
+		EntityTransaction transaction = em.getTransaction();
+
+		if (!transaction.isActive()) {
+			transaction.begin();
+		}
+
+		try {
+
+			em.merge(usuario);
+			transaction.commit();
+		} catch (Exception e) {
+			e.printStackTrace();
+
+		}
 	}
 
 	public Usuario getUsuarioCard(String nomeUsuario, String matricula) {
@@ -67,7 +78,7 @@ public class UsuarioDAO {
 			transaction.commit();
 			return true;
 		} catch (Exception e) {
-			// essa exception não é necessariamente um erro
+			// essa exception nï¿½o ï¿½ necessariamente um erro
 			e.printStackTrace();
 			return false;
 		}

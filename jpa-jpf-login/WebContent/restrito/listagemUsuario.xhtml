@@ -1,3 +1,4 @@
+<?xml version='1.0' encoding='ISO-8859-1' ?>
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:f="http://java.sun.com/jsf/core"
@@ -26,12 +27,13 @@
 
 		<center>
 			<h2>
-				<h:outputText value="Lista de usuÃ¡rios cadastrados" />
+				<h:outputText value="Lista de usuários cadastrados" />
 			</h2>
 		</center>
 		<h:form id="usuarioForm">
+		<h:messages class="text text-danger">
 			<h:dataTable id="usuarioTable" binding="#{table}"
-				value="#{usuarioManagedBean.usuarioListDb}" var="usuario"
+				value="#{usuarioManagedBean.usuarioListDb()}" var="usuario"
 				styleClass="table table-striped table-bordered tableUpdated">
 				<h:column>
 					<f:facet name="header">Id</f:facet>
@@ -42,7 +44,7 @@
 					<h:outputText value="#{usuario.nomeUsuario}" />
 				</h:column>
 				<h:column>
-					<f:facet name="header">MatrÃ­cula</f:facet>
+					<f:facet name="header">Matrícula</f:facet>
 					<h:outputText value="#{usuario.matricula}" />
 				</h:column>
 				<h:column>
@@ -50,14 +52,14 @@
 					<h:outputText value="#{usuario.senha}" />
 				</h:column>
 				<h:column>
-					<f:facet name="header">EndereÃ§o</f:facet>
+					<f:facet name="header">Endereço</f:facet>
 					<h:outputText value="#{usuario.endereco.rua}" />
 				</h:column>
 				<h:column>
-				<f:facet name="header">EndereÃ§o</f:facet>
-				<h:commandButton action="#{enderecoManagedBean.paginaEndereco(usuario)}" rendered="#{usuario.endereco.rua eq null}" value="Incluir EndereÃ§o" styleClass="btn btn-primary">
+				<f:facet name="header">Endereço</f:facet>
+				<h:commandButton action="#{enderecoManagedBean.paginaEndereco(usuario)}" rendered="#{usuario.endereco.rua eq null}" value="Incluir Endereço" styleClass="btn btn-primary">
 				</h:commandButton>
-				<h:commandButton action="#{enderecoManagedBean.paginaEndereco(usuario)}" rendered="#{usuario.endereco.rua ne null}" value="Alterar EndereÃ§o" styleClass="btn btn-primary">
+				<h:commandButton action="#{enderecoManagedBean.paginaEndereco(usuario)}" rendered="#{usuario.endereco.rua ne null}" value="Alterar Endereço" styleClass="btn btn-primary">
 				</h:commandButton>
 				</h:column>
 				<h:column>
@@ -76,9 +78,10 @@
 			</h:dataTable>
 			<center>
 				<h:commandButton action="novoUsuario.xhtml?faces-redirect=true"
-					value="Adicionar novo UsuÃ¡rio"
+					value="Adicionar novo Usuário"
 					styleClass="btn btn-success btnSpace" />
 			</center>
+			</h:messages>
 		</h:form>
 
 	</ui:define>

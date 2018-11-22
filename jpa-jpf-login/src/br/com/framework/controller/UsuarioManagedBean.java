@@ -1,36 +1,45 @@
 package br.com.framework.controller;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.annotation.PostConstruct;
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
+import javax.faces.bean.ManagedProperty;
 import javax.faces.bean.ViewScoped;
 import javax.faces.context.FacesContext;
+import javax.xml.bind.ValidationException;
 
 import br.com.framework.dao.UsuarioDAO;
 import br.com.framework.model.Usuario;
+import br.com.framework.service.UsuarioService;
 
 @ManagedBean
 @ViewScoped
 public class UsuarioManagedBean {
 
+	private final String TELA_NOVO_USUARIO = "/restrito/novoUsuario.xhtml?faces-redirect=true";
+	private final String TELA_LISTAGEM_USUARIO = "/restrito/listagemUsuario?faces-redirect=true";
+	private final String TELA_EDITAR_USUARIO = "/restrito/editarUsuario?faces-redirect=true&id=";
+	
 	private UsuarioDAO usuarioDAO = new UsuarioDAO();
 	private Usuario usuario = new Usuario();
-	private List<Usuario> usuarioListDb = new ArrayList<>();
-
+	
+	@ManagedProperty("#{usuarioService}")
+	private UsuarioService usuarioService;
 
 	@PostConstruct
 	public void init() {
 		FacesContext facesContext = FacesContext.getCurrentInstance();
-		String idUsuario = (String) facesContext.getExternalContext().getRequestParameterMap().get("id");
-		if(idUsuario != null) {
-			this.usuario = usuarioDAO.getUsuario(Integer.parseInt(idUsuario));
+		
+		String id =  (String) facesContext.getExternalContext().getRequestParameterMap().get("id");
+		if(id != null) {
+			Integer idUsuario = Integer.parseInt(id);
+			this.usuario = usuarioDAO.getUsuario(idUsuario);
 		}
 	}
 
-	public List getUsuarioListDb() {
+	public List usuarioListDb() {
 		return usuarioDAO.listarUsuario();
 	}
 
@@ -39,18 +48,42 @@ public class UsuarioManagedBean {
 	}
 
 	public String incluirUsuarioDb(Usuario usuario) {
-		if (!usuarioDAO.inserirUsuario(usuario)) {
+		try {
+			getUsuarioService().salvarUsuario(usuario);
+			return TELA_LISTAGEM_USUARIO;
+		} catch (Exception e) {
+			e.printStackTrace();
+
 			FacesContext context = FacesContext.getCurrentInstance();
-			context.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR, "Erro: Usu�rio j� existe!", "--"));
+			context.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR, e.getMessage(), ""));
 			context.getExternalContext().getFlash().setKeepMessages(true);
 			
-			return "/restrito/novoUsuario.xhtml?faces-redirect=true";
+			return TELA_NOVO_USUARIO;
 		}
-		return "/restrito/listagemUsuario?faces-redirect=true";
 	}
 
 	public String paginaEditar(Usuario usuario) {
-		return "/restrito/editarUsuario?faces-redirect=true&id="+usuario.getId();
+		FacesContext context = FacesContext.getCurrentInstance();
+		try {
+			
+			String id = context.getExternalContext().getSessionMap().get("id").toString();
+			if(id != null) {
+				Integer idUsuario = Integer.parseInt(id);
+				this.usuario = usuarioDAO.getUsuario(idUsuario);
+			}
+			
+			getUsuarioService().telaEdicao(this.usuario);
+			this.usuario = usuario;
+			
+		} catch (ValidationException e) {
+			e.printStackTrace();
+			context.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR, e.getMessage(), null));
+			context.getExternalContext().getFlash().setKeepMessages(true);
+			
+			return TELA_LISTAGEM_USUARIO;
+		}
+		
+		return TELA_EDITAR_USUARIO+usuario.getId();
 	}
 
 	public String editarUsuarioDb(Usuario usuario) {
@@ -66,8 +99,12 @@ public class UsuarioManagedBean {
 		this.usuario = usuario;
 	}
 
-	public void setUsuarioListDb(List<Usuario> usuarioListDb) {
-		this.usuarioListDb = usuarioListDb;
+	public UsuarioService getUsuarioService() {
+		return usuarioService;
+	}
+
+	public void setUsuarioService(UsuarioService usuarioService) {
+		this.usuarioService = usuarioService;
 	}
 
 }
