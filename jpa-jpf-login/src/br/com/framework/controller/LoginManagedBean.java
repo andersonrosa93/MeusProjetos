@@ -19,6 +19,7 @@ public class LoginManagedBean {
 
 	private UsuarioDAO usuarioDAO = new UsuarioDAO();
 	private Usuario usuario = new Usuario();
+	private Boolean remember = false;
 	
 	@ManagedProperty("#{usuarioService}")
 	private UsuarioService usuarioService;
@@ -30,7 +31,7 @@ public class LoginManagedBean {
 		if (usuario == null) {
 			usuario = new Usuario();
 			FacesContext.getCurrentInstance().addMessage(null,
-					new FacesMessage(FacesMessage.SEVERITY_ERROR, "Usu�rio n�o encontrado!", "Erro no Login!"));
+					new FacesMessage(FacesMessage.SEVERITY_ERROR, "Usuario não encontrado!", "Erro no Login!"));
 			FacesContext.getCurrentInstance().validationFailed();
 			
 			context.getExternalContext().getSessionMap().put("logado", false);
@@ -70,4 +71,11 @@ public class LoginManagedBean {
 		this.usuarioService = usuarioService;
 	}
 
+	public Boolean getRemember() {
+		return remember;
+	}
+
+	public void setRemember(Boolean remember) {
+		this.remember = remember;
+	}
 }

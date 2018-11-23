@@ -14,9 +14,9 @@
 		<properties>
 		
 		<property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
-		<property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/3way-Ter-Qui"/>
+		<property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/bdtradesystem"/>
 		<property name="javax.persistence.jdbc.user" value="postgres"/>
-		<property name="javax.persistence.jdbc.password" value="123456"/>
+		<property name="javax.persistence.jdbc.password" value="pactodb"/>
 		
 		
 		<property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>
