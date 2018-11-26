@@ -31,7 +31,7 @@ public class LoginManagedBean {
 		if (usuario == null) {
 			usuario = new Usuario();
 			FacesContext.getCurrentInstance().addMessage(null,
-					new FacesMessage(FacesMessage.SEVERITY_ERROR, "Usuario não encontrado!", "Erro no Login!"));
+					new FacesMessage(FacesMessage.SEVERITY_ERROR, "Usuario ou senha inválido!", "Erro no Login!"));
 			FacesContext.getCurrentInstance().validationFailed();
 			
 			context.getExternalContext().getSessionMap().put("logado", false);

@@ -28,18 +28,18 @@ public class EnderecoManagedBean {
 	private Usuario usuario;
 	
 	public List enderecoListDb() {
-		return enderecoService.listarEndereco();
+		return getEnderecoService().listarEndereco();
 	}
 	
 	
 	public void excluirEnderecoDb(Endereco endereco) {
-		enderecoService.deletarEndereco(endereco);
+		getEnderecoService().deletarEndereco(endereco);
 	}
 	
 	public String incluirEnderecoDb(Endereco endereco) {
 		try {
 			endereco.setUsuario(usuario);
-			enderecoService.salvarEndereco(endereco);
+			getEnderecoService().salvarEndereco(endereco);
 			
 			return TELA_LISTAGEM_ENDERECO;
 		}catch(Exception e) {
@@ -55,7 +55,7 @@ public class EnderecoManagedBean {
 	
 	public String editarEnderecoDb(Endereco endereco) {
 		try {
-			enderecoService.editarEndereco(endereco);
+			getEnderecoService().editarEndereco(endereco);
 		}catch (ValidationException e) {
 			e.printStackTrace();
 		}

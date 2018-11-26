@@ -3,8 +3,8 @@
 
 <h:head>
 
-      <link href="login/css/bootstrap.css" rel="stylesheet"/>
-      <link href="login/css/floating-labels.css" rel="stylesheet"/>
+      <link href="#{facesContext.externalContext.requestContextPath}/login/css/bootstrap.css" rel="stylesheet"/>
+      <link href="#{facesContext.externalContext.requestContextPath}/login/css/floating-labels.css" rel="stylesheet"/>
 </h:head>
 
 <h:body>
@@ -13,12 +13,12 @@
       <h:form styleClass="form-signin">
 
 
-            <h:messages class="text text-danger"/>
+
             <div class="text-center mb-4">
                   <img class="mb-4" src="https://upload.wikimedia.org/wikipedia/commons/e/ea/Boostrap_logo.svg" alt="" width="72" height="72"></img>
                   <h1 class="h3 mb-3 font-weight-normal">LOGIN</h1>
             </div>
-
+            <h:messages class="text text-danger"/>
             <div class="form-label-group">
 
                   <h:inputText styleClass="form-control" id="nomeUsuario" value="#{loginMB.usuario.nomeUsuario}"/>

@@ -10,7 +10,8 @@
 
 		<class>br.com.framework.model.Usuario</class>
 		<class>br.com.framework.model.Endereco</class>
-		
+		<class>br.com.framework.model.Produto</class>
+
 		<properties>
 		
 		<property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
