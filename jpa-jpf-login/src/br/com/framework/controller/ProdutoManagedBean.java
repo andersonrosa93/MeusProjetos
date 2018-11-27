@@ -10,8 +10,8 @@ import javax.faces.context.FacesContext;
 import javax.validation.ValidationException;
 
 
+
 import br.com.framework.model.Produto;
-import br.com.framework.model.Usuario;
 import br.com.framework.service.ProdutoService;
 
 @ManagedBean
@@ -25,7 +25,7 @@ public class ProdutoManagedBean {
 
 	@ManagedProperty("#{produtoService}")
 	private ProdutoService produtoService;
-	private Produto produto = new Produto();
+	private Produto produto;
 
 	public List produtoListDb() {
 		return getProdutoService().listarProduto();
@@ -65,15 +65,16 @@ public class ProdutoManagedBean {
 	public String paginaProduto(Produto produto) {
 		String tela = "";
 		this.produto = produto;
-		if(produto.getNome() != null) {
+		if(produto != null) {
 			tela = TELA_PRODUTO_EDITAR + produto.getId();
 		}else {
 			this.setProduto(new Produto());
-			tela = TELA_NOVO_PRODUTO + produto.getId();
+			tela = TELA_NOVO_PRODUTO;
 		}
 
 		return tela;
 	}
+
 
 	public ProdutoService getProdutoService() {
 		return produtoService;
