@@ -15,19 +15,19 @@ import br.com.framework.model.Endereco;
 public class EnderecoService {
 
 	private EnderecoDAO enderecoDAO = new EnderecoDAO();
-	
+
 	public void salvarEndereco(Endereco endereco) throws ValidationException{
 		enderecoDAO.inserirEndereco(endereco);
 	}
-	
+
 	public void editarEndereco(Endereco endereco) throws ValidationException{
 		enderecoDAO.alterarEndereco(endereco);
 	}
-	
+
 	public List listarEndereco() {
 		return enderecoDAO.listarEndereco();
 	}
-	
+
 	public void deletarEndereco(Endereco endereco){
 		enderecoDAO.deletarEndereco(endereco);
 	}

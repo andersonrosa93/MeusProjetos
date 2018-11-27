@@ -1,59 +1,59 @@
 <?xml version='1.0' encoding='ISO-8859-1' ?>
 <html xmlns="http://www.w3.org/1999/xhtml"
-	xmlns:h="http://java.sun.com/jsf/html"
-	xmlns:f="http://java.sun.com/jsf/core"
-	xmlns:p="http://primefaces.org/ui"
-	xmlns:ui="http://java.sun.com/jsf/facelets">
+	  xmlns:h="http://java.sun.com/jsf/html"
+	  xmlns:f="http://java.sun.com/jsf/core"
+	  xmlns:p="http://primefaces.org/ui"
+	  xmlns:ui="http://java.sun.com/jsf/facelets">
 
 <h:body>
 	<ui:composition template="/restrito/template/layout.xhtml">
 
-	<ui:define name="content">
+		<ui:define name="content">
 
-		<h:form>
-			<p:outputLabel
-				value="Login efetuado com sucesso! Bem vindo ao sistema!"></p:outputLabel>
-		</h:form>
+			<h:form>
+				<p:outputLabel
+						value="Login efetuado com sucesso! Bem vindo ao sistema!"></p:outputLabel>
+			</h:form>
 
-		<center>
-			<h2>
-				<h:outputText value="Lista de endereços cadastrados" />
-			</h2>
-		</center>
-		<h:form id="enderecoForm">
-			<h:dataTable id="enderecoTable" binding="#{table}"
-				value="#{enderecoManagedBean.enderecoListDb()}" var="endereco"
-				styleClass="table table-bordered">
-				<h:column>
-					<f:facet name="header">Id</f:facet>
-					<h:outputText value="#{endereco.id}" />
-				</h:column>
-				<h:column>
-					<f:facet name="header">Rua</f:facet>
-					<h:outputText value="#{endereco.rua}" />
-				</h:column>
-				<h:column>
-					<f:facet name="header">Bairro</f:facet>
-					<h:outputText value="#{endereco.bairro}" />
-				</h:column>
-				<h:column>
-					<f:facet name="header">Municipio</f:facet>
-					<h:outputText value="#{endereco.municipio}" />
-				</h:column>
-				<h:column>
-					<f:facet name="header">Estado</f:facet>
-					<h:outputText value="#{endereco.estado}" />
-				</h:column>
-				<h:column>
-					<f:facet name="header">Delete</f:facet>
-					<h:commandButton
-						action="#{enderecoManagedBean.excluirEnderecoDb(endereco)}"
-						value="Deletar" styleClass="btn btn-danger" />
-				</h:column>
-			</h:dataTable>
-		</h:form>
+			<center>
+				<h2>
+					<h:outputText value="Lista de endereços cadastrados" />
+				</h2>
+			</center>
+			<h:form id="enderecoForm">
+				<h:dataTable id="enderecoTable" binding="#{table}"
+							 value="#{enderecoManagedBean.enderecoListDb()}" var="endereco"
+							 styleClass="table table-bordered">
+					<h:column>
+						<f:facet name="header">Id</f:facet>
+						<h:outputText value="#{endereco.id}" />
+					</h:column>
+					<h:column>
+						<f:facet name="header">Rua</f:facet>
+						<h:outputText value="#{endereco.rua}" />
+					</h:column>
+					<h:column>
+						<f:facet name="header">Bairro</f:facet>
+						<h:outputText value="#{endereco.bairro}" />
+					</h:column>
+					<h:column>
+						<f:facet name="header">Municipio</f:facet>
+						<h:outputText value="#{endereco.municipio}" />
+					</h:column>
+					<h:column>
+						<f:facet name="header">Estado</f:facet>
+						<h:outputText value="#{endereco.estado}" />
+					</h:column>
+					<h:column>
+						<f:facet name="header">Delete</f:facet>
+						<h:commandButton
+								action="#{enderecoManagedBean.excluirEnderecoDb(endereco)}"
+								value="Deletar" styleClass="btn btn-danger" />
+					</h:column>
+				</h:dataTable>
+			</h:form>
 
-	</ui:define>
+		</ui:define>
 	</ui:composition>
 </h:body>
 </html>

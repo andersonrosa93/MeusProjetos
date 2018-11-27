@@ -37,6 +37,14 @@ public class ProdutoDAO {
 		}
 	}
 
+	public Produto getProduto(int id) {
+		try {
+			return em.find(Produto.class, id);
+		} catch (NoResultException e) {
+			return null;
+		}
+	}
+
 	public boolean deletarProduto(Produto produto) {
 		if (!transaction.isActive()) {
 			transaction.begin();

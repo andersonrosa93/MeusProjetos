@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='ISO-8859-1' ?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+
+
+<h:body>
+	<ui:composition template="/restrito/template/layout.xhtml">
+
+	<ui:define name="content">
+		<h:form>
+			<p:outputLabel
+				value="Login efetuado com sucesso! Bem vindo ao sistema!"></p:outputLabel>
+		</h:form>
+
+		<center>
+			<h2>
+				<h:outputText value="Lista de produtos cadastrados" />
+			</h2>
+		</center>
+		<h:form id="produtosForm">
+		<h:messages class="text text-danger">
+			<h:dataTable id="produtosTable" binding="#{table}"
+				value="#{produtoManagedBean.produtoListDb()}" var="produto"
+				styleClass="table table-bordered">
+				<h:column>
+					<f:facet name="header">Id</f:facet>
+					<h:outputText value="#{produto.id}" />
+				</h:column>
+				<h:column>
+					<f:facet name="header">Nome</f:facet>
+					<h:outputText value="#{produto.nome}" />
+				</h:column>
+				<h:column>
+					<f:facet name="header">Valor</f:facet>
+					<h:outputText value="#{produto.valor}" />
+				</h:column>
+				<h:column>
+					<f:facet name="header">Update</f:facet>
+					<h:commandButton
+						action="#{produtoManagedBean.paginaProduto(produto)}"
+						value="Atualizar" styleClass="btn btn-primary">
+					</h:commandButton>
+				</h:column>
+				<h:column>
+					<f:facet name="header">Delete</f:facet>
+					<h:commandButton
+						action="#{produtoManagedBean.excluirProdutoDb(produto)}"
+						value="Deletar" styleClass="btn btn-danger" />
+				</h:column>
+			</h:dataTable>
+			<center>
+				<h:commandButton action="novoProduto.xhtml?faces-redirect=true"
+					value="Adicionar novo Produto"
+					styleClass="btn btn-success btnSpace" />
+			</center>
+			</h:messages>
+		</h:form>
+
+	</ui:define>
+	</ui:composition>
+</h:body>
+
+</html>

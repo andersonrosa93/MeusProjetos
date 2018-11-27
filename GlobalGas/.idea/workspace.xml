@@ -8,8 +8,35 @@
   <component name="ChangeListManager">
     <list default="true" id="17cd1f15-a625-4be1-83d9-c3ce838832a3" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebContent/login/login.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/login/login.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/GlobalGas-0.0.1-SNAPSHOT/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/GlobalGas-0.0.1-SNAPSHOT/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jpa-jpf-login/.idea/libraries/Maven__antlr_antlr_2_7_7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jpa-jpf-login/.idea/libraries/Maven__commons_collections_commons_collections_3_2_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jpa-jpf-login/.idea/libraries/Maven__commons_io_commons_io_2_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jpa-jpf-login/.idea/libraries/Maven__dom4j_dom4j_1_6_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jpa-jpf-login/.idea/libraries/Maven__javax_validation_validation_api_1_0_0_GA.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jpa-jpf-login/.idea/libraries/Maven__org_glassfish_javax_faces_2_1_13.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jpa-jpf-login/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_4_0_1_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jpa-jpf-login/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_tests_4_0_1_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jpa-jpf-login/.idea/libraries/Maven__org_hibernate_hibernate_core_4_0_1_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jpa-jpf-login/.idea/libraries/Maven__org_hibernate_hibernate_entitymanager_4_0_1_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jpa-jpf-login/.idea/libraries/Maven__org_hibernate_hibernate_validator_4_2_0_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jpa-jpf-login/.idea/libraries/Maven__org_hibernate_javax_persistence_hibernate_jpa_2_0_api_1_0_1_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jpa-jpf-login/.idea/libraries/Maven__org_javassist_javassist_3_15_0_GA.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jpa-jpf-login/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_1_0_CR2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jpa-jpf-login/.idea/libraries/Maven__org_jboss_spec_javax_transaction_jboss_transaction_api_1_1_spec_1_0_0_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jpa-jpf-login/.idea/libraries/Maven__org_postgresql_postgresql_42_2_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jpa-jpf-login/.idea/libraries/Maven__org_primefaces_primefaces_5_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jpa-jpf-login/.idea/libraries/Maven__org_slf4j_slf4j_api_1_6_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jpa-jpf-login/.idea/libraries/Maven__xml_apis_xml_apis_1_0_b2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jpa-jpf-login/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../jpa-jpf-login/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jpa-jpf-login/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../jpa-jpf-login/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jpa-jpf-login/WebContent/restrito/editarUsuario.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/../jpa-jpf-login/WebContent/restrito/editarUsuario.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jpa-jpf-login/WebContent/restrito/produto/novoProduto.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/../jpa-jpf-login/WebContent/restrito/produto/novoProduto.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jpa-jpf-login/WebContent/restrito/template/header.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/../jpa-jpf-login/WebContent/restrito/template/header.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jpa-jpf-login/jpa-jpf-login.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../jpa-jpf-login/jpa-jpf-login.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jpa-jpf-login/src/br/com/framework/controller/EnderecoManagedBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/../jpa-jpf-login/src/br/com/framework/controller/EnderecoManagedBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jpa-jpf-login/src/br/com/framework/controller/ProdutoManagedBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/../jpa-jpf-login/src/br/com/framework/controller/ProdutoManagedBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jpa-jpf-login/src/br/com/framework/dao/ProdutoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../jpa-jpf-login/src/br/com/framework/dao/ProdutoDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jpa-jpf-login/src/br/com/framework/service/ProdutoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../jpa-jpf-login/src/br/com/framework/service/ProdutoService.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -59,23 +86,89 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="594405007">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="java" value="1" />
+          <entry key="xhtml" value="5" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JAVA" value="1" />
+          <entry key="XHTML" value="5" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/WebContent/login/login.xhtml">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WebContent/restrito/template/basicheader.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="35" column="77" selection-start-line="35" selection-start-column="77" selection-end-line="35" selection-end-column="77" />
+            <state relative-caret-position="68">
+              <caret line="4" column="47" selection-start-line="4" selection-start-column="47" selection-end-line="4" selection-end-column="47" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WebContent/restrito/template/basicheader.xhtml">
+        <entry file="file://$PROJECT_DIR$/WebContent/restrito/endereco/listagemEndereco.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="47" lean-forward="true" selection-start-line="4" selection-start-column="47" selection-end-line="4" selection-end-column="47" />
+            <state relative-caret-position="-170">
+              <caret line="14" column="55" selection-start-line="14" selection-start-column="55" selection-end-line="14" selection-end-column="55" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WebContent/restrito/listagemUsuario.xhtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="164">
+              <caret line="47" column="69" lean-forward="true" selection-start-line="47" selection-start-column="69" selection-end-line="47" selection-end-column="69" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/globalgas/mb/EnderecoManagedBean.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="219">
+              <caret line="54" column="18" selection-start-line="54" selection-start-column="18" selection-end-line="54" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WebContent/restrito/endereco/novoEndereco.xhtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="717">
+              <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WebContent/restrito/editarUsuario.xhtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="222">
+              <caret line="43" column="41" selection-start-line="43" selection-start-column="32" selection-end-line="43" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WebContent/restrito/novoUsuario.xhtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="40" column="22" lean-forward="true" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -156,9 +249,9 @@
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-185" />
-    <option name="y" value="36" />
-    <option name="width" value="1382" />
-    <option name="height" value="744" />
+    <option name="y" value="35" />
+    <option name="width" value="1383" />
+    <option name="height" value="745" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -166,6 +259,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -187,12 +281,6 @@
               <item name="GlobalGas" type="b2602c69:ProjectViewProjectNode" />
               <item name="GlobalGas" type="462c0819:PsiDirectoryNode" />
               <item name="WebContent" type="462c0819:PsiDirectoryNode" />
-              <item name="login" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GlobalGas" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GlobalGas" type="462c0819:PsiDirectoryNode" />
-              <item name="WebContent" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -206,13 +294,19 @@
               <item name="GlobalGas" type="462c0819:PsiDirectoryNode" />
               <item name="WebContent" type="462c0819:PsiDirectoryNode" />
               <item name="restrito" type="462c0819:PsiDirectoryNode" />
+              <item name="endereco" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GlobalGas" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GlobalGas" type="462c0819:PsiDirectoryNode" />
+              <item name="WebContent" type="462c0819:PsiDirectoryNode" />
+              <item name="restrito" type="462c0819:PsiDirectoryNode" />
               <item name="template" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -220,7 +314,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542398581270" />
-    <property name="last_opened_file_path" value="C:/PactoJ/Desenvolvimento/Sistemas/ZillyonWeb/Versao" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Project" />
@@ -429,17 +523,18 @@
       <workItem from="1542369225166" duration="455000" />
       <workItem from="1542389464627" duration="8279000" />
       <workItem from="1542913159120" duration="1167000" />
+      <workItem from="1543283843445" duration="402000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27624000" />
+    <option name="totallyTimeSpent" value="28026000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18381241" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18657719" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Persistence" order="2" side_tool="true" />
       <window_info id="Designer" order="3" />
@@ -451,7 +546,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3295082" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32913387" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.49853587" visible="true" weight="0.39836067" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49853587" weight="0.39836067" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -551,13 +646,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/jre/lib/rt.jar!/java/lang/String.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-290">
-          <caret line="482" column="19" selection-start-line="482" selection-start-column="19" selection-end-line="482" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/jre/lib/rt.jar!/java/lang/String.class" />
     <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -616,24 +705,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/globalgas/mb/EnderecoManagedBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="50" column="4" lean-forward="true" selection-start-line="50" selection-start-column="4" selection-end-line="50" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="184">
           <caret line="102" column="8" selection-start-line="102" selection-start-column="8" selection-end-line="102" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebContent/restrito/endereco/novoEndereco.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="52" column="24" selection-start-line="52" selection-start-column="24" selection-end-line="52" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -664,43 +739,9 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/WebContent/login/css/bootstrap.min.css" />
-    <entry file="file://$PROJECT_DIR$/WebContent/login/css/bootstrap.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1649">
-          <caret line="14" column="19" lean-forward="true" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/login/css/bootstrap.css" />
     <entry file="file://$PROJECT_DIR$/WebContent/resources/css/bootstrap.min.css">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebContent/restrito/endereco/listagemEndereco.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="14" column="55" lean-forward="true" selection-start-line="14" selection-start-column="55" selection-end-line="14" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebContent/restrito/listagemUsuario.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebContent/restrito/novoUsuario.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="40" column="22" lean-forward="true" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebContent/restrito/editarUsuario.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="43" column="41" selection-start-line="43" selection-start-column="32" selection-end-line="43" selection-end-column="41" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/globalgas/mb/LoginManagedBean.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -716,17 +757,53 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/login/login.xhtml" />
     <entry file="file://$PROJECT_DIR$/WebContent/restrito/template/basicheader.xhtml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
-          <caret line="4" column="47" lean-forward="true" selection-start-line="4" selection-start-column="47" selection-end-line="4" selection-end-column="47" />
+          <caret line="4" column="47" selection-start-line="4" selection-start-column="47" selection-end-line="4" selection-end-column="47" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WebContent/login/login.xhtml">
+    <entry file="file://$PROJECT_DIR$/WebContent/restrito/editarUsuario.xhtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="35" column="77" selection-start-line="35" selection-start-column="77" selection-end-line="35" selection-end-column="77" />
+        <state relative-caret-position="222">
+          <caret line="43" column="41" selection-start-line="43" selection-start-column="32" selection-end-line="43" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/restrito/novoUsuario.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="40" column="22" lean-forward="true" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/restrito/endereco/listagemEndereco.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-170">
+          <caret line="14" column="55" selection-start-line="14" selection-start-column="55" selection-end-line="14" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/restrito/endereco/novoEndereco.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="717">
+          <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/restrito/listagemUsuario.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="47" column="69" lean-forward="true" selection-start-line="47" selection-start-column="69" selection-end-line="47" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/globalgas/mb/EnderecoManagedBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="54" column="18" selection-start-line="54" selection-start-column="18" selection-end-line="54" selection-end-column="18" />
         </state>
       </provider>
     </entry>

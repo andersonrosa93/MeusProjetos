@@ -20,49 +20,49 @@ public class EnderecoManagedBean {
 	private final String TELA_NOVO_ENDERECO = "/restrito/endereco/novoEndereco.xhtml?faces-redirect=true";
 	private final String TELA_LISTAGEM_ENDERECO = "/restrito/endereco/listagemEndereco.xhtml?faces-redirect=true";
 	private final String TELA_ENDERECO_EDITAR = "/restrito/endereco/editarEndereco.xhtml?faces-redirect=true&id=";
-	
-	
+
+
 	@ManagedProperty("#{enderecoService}")
 	private EnderecoService enderecoService;
 	private Endereco endereco;
 	private Usuario usuario;
-	
+
 	public List enderecoListDb() {
 		return getEnderecoService().listarEndereco();
 	}
-	
-	
+
+
 	public void excluirEnderecoDb(Endereco endereco) {
 		getEnderecoService().deletarEndereco(endereco);
 	}
-	
+
 	public String incluirEnderecoDb(Endereco endereco) {
 		try {
 			endereco.setUsuario(usuario);
 			getEnderecoService().salvarEndereco(endereco);
-			
+
 			return TELA_LISTAGEM_ENDERECO;
 		}catch(Exception e) {
 			e.printStackTrace();
-			
+
 			FacesContext context = FacesContext.getCurrentInstance();
 			context.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR, e.getMessage(), ""));
 			context.getExternalContext().getFlash().setKeepMessages(true);
-			
+
 			return TELA_NOVO_ENDERECO;
 		}
 	}
-	
+
 	public String editarEnderecoDb(Endereco endereco) {
 		try {
 			getEnderecoService().editarEndereco(endereco);
 		}catch (ValidationException e) {
 			e.printStackTrace();
 		}
-		
+
 		return TELA_LISTAGEM_ENDERECO;
 	}
-	
+
 	public String paginaEndereco(Usuario usuario) {
 		String tela = "";
 		this.usuario = usuario;
@@ -73,12 +73,12 @@ public class EnderecoManagedBean {
 			this.setEndereco(new Endereco());
 			tela = TELA_NOVO_ENDERECO + usuario.getId();
 		}
-		
+
 		return tela;
 	}
-	
 
-	
+
+
 
 
 
@@ -110,6 +110,6 @@ public class EnderecoManagedBean {
 	public void setEndereco(Endereco endereco) {
 		this.endereco = endereco;
 	}
-	
-	
+
+
 }
