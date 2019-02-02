@@ -22,19 +22,19 @@ public class LoginFilter implements Filter {
 			throws IOException, ServletException {
 		
 		 HttpSession sess = ((HttpServletRequest) request).getSession(true);
-		 //recuperar o atributo logado da sessão
+		 //recuperar o atributo logado da sessao
 		 boolean logado = false;
 		 if(sess.getAttribute("logado") != null) {
 			 logado = (Boolean) sess.getAttribute("logado");
 		 }
 
-		// caso a variável logado seja false saberemos que
-		// o usuário não está logado
+		// caso a variavel logado seja false saberemos que
+		// o usuario nao esta logado
 		if (!logado) {
 			String contextPath = ((HttpServletRequest) request).getContextPath();
 
-			// Redirecionamos o usuário imediatamente
-			// para a página de login.xhtml
+			// Redirecionamos o usuario imediatamente
+			// para a pagina de login.xhtml
 			((HttpServletResponse) response).sendRedirect(contextPath + "/login/login.xhtml");
 		} else {
 			// Caso ele esteja logado, apenas deixamos

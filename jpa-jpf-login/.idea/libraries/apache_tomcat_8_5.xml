@@ -1,14 +1,14 @@
 <component name="libraryTable">
   <library name="apache-tomcat-8.5">
     <CLASSES>
-      <root url="file://C:/PactoJ/Desenvolvimento/Ferramentas/apache-tomcat-8.5.34" />
+      <root url="file://$PROJECT_DIR$/../../../Ferramentas/apache-tomcat-8.5.37" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
-      <root url="file://C:/PactoJ/Desenvolvimento/Ferramentas/apache-tomcat-8.5.34/webapps/docs/appdev/sample/src" />
-      <root url="file://C:/PactoJ/Desenvolvimento/Ferramentas/apache-tomcat-8.5.34/webapps/examples/WEB-INF/classes" />
-      <root url="file://C:/PactoJ/Desenvolvimento/Ferramentas/apache-tomcat-8.5.34/webapps/examples/WEB-INF/jsp/applet" />
-      <root url="file://C:/PactoJ/Desenvolvimento/Ferramentas/apache-tomcat-8.5.34/webapps/examples/jsp/plugin/applet" />
+      <root url="file://$PROJECT_DIR$/../../../Ferramentas/apache-tomcat-8.5.37/webapps/docs/appdev/sample/src" />
+      <root url="file://$PROJECT_DIR$/../../../Ferramentas/apache-tomcat-8.5.37/webapps/examples/WEB-INF/classes" />
+      <root url="file://$PROJECT_DIR$/../../../Ferramentas/apache-tomcat-8.5.37/webapps/examples/WEB-INF/jsp/applet" />
+      <root url="file://$PROJECT_DIR$/../../../Ferramentas/apache-tomcat-8.5.37/webapps/examples/jsp/plugin/applet" />
     </SOURCES>
   </library>
 </component>
